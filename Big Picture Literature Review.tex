@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Course Project: Summary and Literature Review}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Project Summary Table}
+\renewcommand{\arraystretch}{1.3}
+\begin{center}
+\begin{longtable}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\hline
+\textbf{Section} & \textbf{Subsection} & \textbf{1-2 sentence summary (NO FIGURES!)} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Section} & \textbf{Subsection} & \textbf{1-2 sentence summary (NO FIGURES!)} \\
+\hline
+\endhead
+
+\hline \multicolumn{3}{r}{\small\emph{(continued on next page)}} \\ 
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Introduction} & Context & The project explores how U.S.\ media constructs American national identity and contrasts it with portrayals of Chinese and Russian nationalism during periods of heightened geopolitical tension (2021--2024). \\
+\cline{2-3}
+ & Your Research Question/Proposed Project & How do major U.S.\ media outlets construct and contrast American nationalism with Chinese and Russian nationalism across ideological lines, topical categories, and time periods? Specifically, how do these outlets frame American national identity through themes of democracy, freedom, and values, and how do these framings shift in response to partisan orientation, news section, and geopolitical tensions? \\
+\cline{2-3}
+ & What does the existing literature say & The existing literature recognizes partisan divergences in how U.S.\ media construct national identity, often contrasting American values with portrayals of China and Russia; however, most studies rely on limited-scale, non-computational approaches and focus on single-country analyses. While some have attempted computational methods, these efforts remain small in scale and rarely incorporate a multidimensional framing schema grounded in political theory. \\
+\cline{2-3}
+ & Significance with respect to existing knowledge/applied problem & This study contributes a multi-layered framework that integrates political theory, media framing, and NLP methods to uncover how emotional, evaluative, and ideological narratives are embedded in U.S.\ news discourse. By operationalizing national identity through a four-dimensional schema---shared values, historical narratives, geopolitical role framing, and portrayals of leadership---it extends prior work with a comparative, scalable, and theoretically grounded approach to analyzing media nationalism across time and ideological contexts. \\
+\hline
+
+\textbf{Data and Methods} & State data/design and justify & The dataset consists of 50,000--100,000 full-text articles from NYT, Fox News, CNN, and WSJ (2021--2024), chosen to represent a diverse ideological spectrum and collected using APIs and custom scraping tools. \\
+\cline{2-3}
+ & State analytical method (if applicable) and justify & The project uses a hybrid method: (1) LDA topic modeling and Sentence-BERT clustering to identify discourse patterns related to national identity, guided by thematic anchors and refined using UMAP and K-Means to reflect four key dimensions---shared values, historical narratives, geopolitical roles, and leadership portrayals. (2) Sentiment and stance detection, followed by supervised BERT classification, evaluate the emotional tone and ideological framing of these clusters, with each dimension manually annotated to ensure theoretical alignment and interpretability. \\
+\hline
+
+\textbf{Feasibility} & Evaluation of approach w.r.t.\ RQ/project goal & The method balances interpretive depth with scalability. The schema guides model interpretation, ensuring identity frames are empirically grounded and computationally tractable. \\
+\cline{2-3}
+ & Initial Results (or Mock-up) & Data collection and initial preprocessing for NYT and Fox News 2024 are complete; Initial LDA models from 2024 NYT and Fox News data show clusters consistent with identity framing categories like “freedom vs control,” and “Western leadership.” \\
+\cline{2-3}
+ & Proposed timeline & Data collection and cleaning: April--May 2025; modeling and sentiment/stance analysis: September--October 2025; supervised classification and writing: October--December 2025. \\
+\cline{2-3}
+ & Securing an Advisor/Sponsor & An advisor with expertise in computational social science and media framing has been identified and supports the methodological framework and research objectives. Dr.\ David A.\ Peterson, Dr.\ Lisa Wedeen, Dr.\ James A.\ Evans \\
+\cline{2-3}
+ & Cost and funding (if applicable) & No significant external costs expected; existing computing resources and publicly available APIs will be used, with minimal expenses covered by departmental research support. \\
+\hline
+
+\textbf{Assessment of the overall structure and alignment} &  & The project shows strong coherence between theory, data, and method. By grounding LDA topics in a validated framing schema and combining them with NLP techniques, it promises both novel insights and methodological rigor in understanding how identity is constructed in geopolitical media discourse. \\
+\end{longtable}
+\end{center}
+
+\clearpage
+\section*{Literature Review}
+
+This study examines how U.S.\ media constructs national identity by contrasting American nationalism with portrayals of Chinese and Russian national identities. To support the research framework, this literature review draws on prior work on media framing, nationalism, sentiment analysis, and computational modeling approaches. Together, these collections of scholarship lay the foundation for understanding both the narratives and the methodological innovations that the present study builds upon.
+
+\subsection*{Media Framing of National Identity and Nationalism}
+
+Framing strategies lie at the core of constructing national identity. Nationalism or national identity is a well contested concept that centered on promoting and protecting the interests, culture, and identity of a nation—often constructed in opposition to perceived external adversaries—and are subject to historical and geopolitical shifts (Anderson, 2006). Scholars have consistently shown that media outlets use selective narratives to differentiate the “self” (the nation) from the “other” (foreign adversaries), particularly in the moment of international tension. For example, Tsygankov (2017) found that U.S.\ media persistently depicted contemporary Russia as a neo-Soviet autocracy, emphasizing its impression of authoritarianism, corruption, and militarism even during periods of diplomatic honeymoon. In parallel, Field (2018) demonstrated that Russian media similarly framed the United States as a negative force, reinforcing domestic national identity during crises.
+
+While these studies underscore the media’s general reliance on selective framing, they also reveal important variations depending on political alignment and ideological interests. Speakman and Funk (2020) analyzed right-wing podcasts and found that both mainstream and far-right platforms employed nationalism and anti-immigrant rhetoric, though with remarkable difference in stylistic choices. Extending this observation to coverage during global crises, Zhang and Trifiro (2022) showed that during the COVID-19 pandemic, conservative media outlets sensationalized and blamed China more heavily than their liberal counterparts, thereby intensifying nationalist sentiment.
+
+Earlier comparative work between major US newspapers further supports the idea that ideology shapes framing practices. Golan and Lukito (2015) revealed stark differences in how \textit{The New York Times} and \textit{The Wall Street Journal} portrayed China’s rise: the NYT emphasized cooperation and internal challenges, whereas the WSJ framed China as a growing existential threat. Building on such insights, Zheng (2024) traced the sharp rise of “China threat” narratives over two decades, closely correlating these media shifts with the changes in American public opinion. These studies collectively highlight not only the persistence of “othering” strategies but also their dynamic responsiveness to domestic political climates.
+
+The tendency for media framing to intensify during geopolitical crises further reinforces the need for a temporal perspective. Hyzen and Van Den Bulck (2024) found that U.S.\ media framed Russia’s invasion of Ukraine as “unprovoked” and “premeditated,” thereby strengthening narratives of American democratic exceptionalism in contrast to Russian authoritarianism. Their findings underscore how geopolitical developments actively reshape the symbolic construction of national identity over time—a dynamic that the present study directly addresses.
+
+\subsection*{Computational Approaches to Framing Analysis}
+
+While traditional media studies relied heavily on qualitative methods, growing complexity and scale in contemporary media study have led scholars to adopt computational approaches. These new methods enable researchers to systematically capture the patterns and shifts in national identity construction that qualitative methods might overlook. Field (2018) exemplified this shift by employing embedding-based and cross-lingual techniques to trace nationalist frames, while Zhang (2024) advanced the field by introducing ANFI, a deep learning model capable of high-accuracy automatic frame identification.
+
+These computational methods are particularly crucial for detecting implicit and evolving narratives. Zheng (2024), for example, showed that BERT-based models could effectively uncover subtle threat narratives that traditional coding might miss, highlighting the methodological need for combining machine learning approaches with framing analysis. The present study builds on this by integrating unsupervised models (such as LDA and Sentence-BERT+UMAP) with supervised fine-tuned BERT classifiers, aiming for both breadth and precision in frame detection.
+
+Moreover, understanding framing fully requires attention not just to thematic content but also to affective and evaluative tones. Balahur (2012) emphasized the role of sentiment polarity in media narratives, finding that hybrid methods combining lexicon-based and deep learning techniques yield greater reliability. Similarly, Mohammad (2013) indicated that stance detection—whether a text supports, opposes, or remains neutral toward a subject—is essential for capturing the deeper political valences embedded within media discourse. Incorporating these approaches, the present study emphasizes sentiment and stance analysis at the cluster level, enriching the thematic modeling with emotional and positional context.
+
+\subsection*{Temporal and Comparative Analyses}
+
+Temporal shifts and partisan divides are recurring themes across the literature, reinforcing the need for a study design attentive to both dynamics. Longitudinal studies like Zheng (2024) revealed how threat narratives about China evolved substantially after 2008, reflecting its alignment with changing geopolitical tensions. Similarly, Field documented cyclical patterns in distraction-based framing linked to economic conditions, underscoring the non-linear and reactive nature of media narratives.
+
+Comparative research further illuminates how ideological orientations shape the portrayal of foreign nations. Zhang and Trifiro (2022) and Speakman and Funk (2020) found significant rhetorical divergence between conservative and liberal media ecosystems, particularly in their nationalist framing strategies. Guo and Vargo (2020) deepened this understanding by showing that left-leaning media tend to frame international relations more cooperatively, while right-leaning outlets more frequently employ threat-based narratives.
+
+Together, these findings inform the present study’s comparative design and temporal focus. By systematically analyzing changes in national identity framing between 2021 and 2024 across ideologically diverse media outlets, this research aims to expand prior work by offering greater temporal depth, a cross-national perspective, and enhanced computational precision.
+
+\subsection*{Summary}
+
+In summary, existing literature demonstrates that national identity is strategically constructed through media framing, shaped by shifting geopolitical contexts, emotional appeals, and partisan biases. Prior research provides strong evidence that media outlets systematically frame foreign nations either as threats or as partners, depending on their ideological orientation and the timing of major events. Studies also highlight the growing power of computational approaches—such as topic modeling (LDA), neural embeddings (BERT), sentiment analysis, and stance detection—in uncovering complex narrative structures within large text corpora.
+
+Building on this foundation, the present study proposes an integrated and innovative approach that combines unsupervised topic modeling, neural embedding-based clustering, supervised classification, and fine-grained sentiment and stance analysis. By focusing specifically on the construction of American, Chinese, and Russian national identities between 2021 and 2024 across ideologically diverse U.S.\ media outlets, this research aims to extend prior work by adding greater temporal depth, enhancing cross-national comparison, and achieving higher computational precision.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{anderson2006}
+Anderson, B. (2006). \textit{Imagined communities: Reflections on the origin and spread of nationalism} (Rev.\ ed.). Verso Books.
+
+\bibitem{balahur2012}
+Balahur, A., Steinberger, R., Kabadjov, M., Zavarella, V., van der Goot, E., Halkia, M., … Pouliquen, B. (2012). Sentiment Analysis in the News. In \textit{Proceedings of LREC 2012}.
+
+\bibitem{field2018}
+Field, A., Kliger, D., Wintner, S., Pan, J., Jurafsky, D., \& Tsvetkov, Y. (2018). Framing and Agenda-setting in Russian News: A Computational Analysis of Intricate Political Strategies. arXiv.
+
+\bibitem{golan2015}
+Golan, G.\ J., \& Lukito, J. (2015). The rise of the dragon? Framing China’s global leadership in elite American newspapers. \textit{International Communication Gazette}, 77(8), 754–772.
+
+\bibitem{guo2020}
+Guo, L., \& Vargo, C.\ J. (2020). Patterns of international news flow: Analyzing the Middle East and Africa’s coverage in Chinese, Russian, and U.S.\ media. \textit{Journalism}, 21(6), 788–808.
+
+\bibitem{hyzen2024}
+Hyzen, A., \& Van Den Bulck, H. (2024). “Putin’s War of Choice”: U.S.\ Propaganda and the Russia–Ukraine Invasion. \textit{Journalism and Media}, 5(1), 233–254.
+
+\bibitem{mohammad2013}
+Mohammad, S.\ M., Kiritchenko, S., \& Zhu, X. (2013). NRC-Canada: Building the State-of-the-Art in Sentiment Analysis of Tweets. \textit{Proceedings of SemEval-2013}.
+
+\bibitem{speakman2020}
+Speakman, B., \& Funk, M. (2020). News, Nationalism, and Hegemony: The Formation of Consistent Issue Framing Throughout the U.S.\ Political Right. \textit{Mass Communication and Society}, 23(5), 656–681.
+
+\bibitem{tsygankov2017}
+Tsygankov, A.\ P. (2017). The dark double: The American media perception of Russia as a neo-Soviet autocracy, 2008–2014. \textit{Politics}, 37(1), 19–35.
+
+\bibitem{zhang2024}
+Zhang, X., Wei, Q., Zheng, B., \& Zhang, P. (2024). A Deep Learning Method for Automatic News Frame Identification. In \textit{Proceedings of the 2024 IEEE/ACIS 27th International Conference on Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing (SNPD)}.
+
+\bibitem{zhangtrifiro2022}
+Zhang, Y., \& Trifiro, B. (2022). Who Portrayed It as “The Chinese Virus”? An Analysis of the Multiplatform Partisan Framing in U.S.\ News Coverage About China in the COVID-19 Pandemic. Manuscript.
+
+\bibitem{zheng2024}
+Zheng, J., Du, Y.\ R., \& Xu, M. (2024). “China threat” agenda in American media and public perception of China: A large-scale content analysis from 1999 to 2019. \textit{International Communication Gazette}.
+\end{thebibliography}
+
+\end{document}
