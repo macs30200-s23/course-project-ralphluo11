@@ -62,20 +62,28 @@ This bar chart provides an example of how identity frames are automatically extr
 
 ---
 
-##  Setup Instructions
+## Setup Instructions
 
+To reproduce or extend the pipeline:
 
+- Use **Python 3.9+**
+- Install the following Python packages:
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `nltk`
+  - `spacy`
+  - `vaderSentiment`
+  - `umap-learn`
+  - `scikit-learn`
+  - `transformers`
+  - `sentence-transformers`
+- Clone this repository and navigate to the project root
+- Open and run `notebooks/mock.ipynb` to execute the full analysis
+- For BERT-based classification or embedding steps, a GPU-enabled environment is recommended
 
 ---
 
-##  Advisor Team
-
-- Dr. David A. Peterson - computational political science
-- Dr. Lisa Wedeen - symbolic politics and nationalism
-- Dr. James Evans - computational social science
-
----
-
-##  Citation (for final paper)
+##  Citation
 
 Luo, J. (2025). *Framing the Nation: How U.S. Media Constructs American, Chinese, and Russian National Identity* [Research proposal]. University of Chicago.
