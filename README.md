@@ -62,7 +62,7 @@ COURSE-PROJECT/
 ├── main.tex                                    # LaTeX source file for paper/report
 ├── Annotated_Bibliography.bib                  # Annotated bibliography (BibTeX format)
 ├── IEEEannot.bst                               # Custom BibTeX style for annotations
-├── Big Picture Literature Review.tex           # Extended literature review
+├── Big Picture Literature Review.tex           # Literature review
 └── README.md                                   # Project overview and documentation
 ```
 ---
