@@ -47,6 +47,7 @@ This bar chart provides an example of how identity frames are automatically extr
 
 ##  Folder Layout
 
+```
 COURSE-PROJECT/
 │
 ├── Data/
@@ -58,12 +59,12 @@ COURSE-PROJECT/
 │   └── stance/                                 # Stance classification plots
 │
 ├── mock.ipynb                                  # Main analysis notebook
-├── main.tex                                    # LaTeX source file for bibliography
+├── main.tex                                    # LaTeX source file for paper/report
 ├── Annotated_Bibliography.bib                  # Annotated bibliography (BibTeX format)
-├── IEEEannot.bst                               # Custom BibTeX style for annotations in bibliography
-├── Big Picture Literature Review.tex           # Literature review
+├── IEEEannot.bst                               # Custom BibTeX style for annotations
+├── Big Picture Literature Review.tex           # Extended literature review
 └── README.md                                   # Project overview and documentation
-
+```
 ---
 
 ## Setup Instructions
