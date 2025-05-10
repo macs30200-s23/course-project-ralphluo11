@@ -5,15 +5,15 @@
 
 This proposal outlines a computational media analysis project focused on understanding how U.S. English-language media constructs national identity in relation to geopolitical rivals. Specifically, the study investigates how American outlets portray the United States in contrast to China and Russia, emphasizing how these portrayals shift over time, differ across political orientations, and respond to major international developments.
 
-By analyzing large-scale news data from The New York Times, Fox News, CNN, and The Wall Street Journal (2022–2024), this project applies scalable natural language processing (NLP) techniques to identify and classify thematic identity frames. Using a hybrid pipeline that combines Latent Dirichlet Allocation (LDA), Sentence-BERT embeddings, UMAP+KMeans clustering, and BERT-based supervised classifiers, the study extracts frames like “geopolitical influence,” “state governance,” “historical legacy,” and “dictatorship.”
+By analyzing large-scale news data from The New York Times, Fox News, CNN, and The Wall Street Journal (2021–2024), this project applies scalable natural language processing (NLP) techniques to identify and classify thematic identity frames. Using a hybrid pipeline that combines Latent Dirichlet Allocation (LDA), Sentence-BERT embeddings, UMAP+KMeans clustering, and BERT-based supervised classifiers, the study extracts frames like “geopolitical influence,” “state governance,” “historical legacy,” and “dictatorship.”
 
-In addition to thematic classification, the project detects sentiment (via VADER) and stance (supportive, oppositional, neutral) using both rule-based and GPT-assisted methods. These dimensions are tracked over time to reveal how news coverage shifts in tone and framing during moments of international tension (e.g., trade wars, military standoffs, diplomatic events).
+In addition to thematic classification, the project detects sentiment (via VADER) and stance (supportive, oppositional, neutral) using both rule-based and GPT-assisted methods. These dimensions are tracked over time to reveal how news coverage shifts in tone and framing during moments of international tension (trade wars, military standoffs, diplomatic events, and other events).
 
 Ultimately, this research seeks to uncover patterns in how national identity is discursively constructed, contested, and politicized in American media. The proposed framework enables comparative analysis across outlets and over time, offering insights into the performative role of journalism in shaping geopolitical narratives.
 
 ---
 
-##  Workflow Summary (from `notebooks/mock.ipynb`)
+##  Workflow Summary (from `mock.ipynb`)
 
 ###  Data Preprocessing
 - Load and clean NYT 2024 dataset: `data/China_article_nyt2024.csv`
@@ -28,7 +28,7 @@ Ultimately, this research seeks to uncover patterns in how national identity is 
 
 ###  Semantic Clustering
 - Use SBERT + UMAP + KMeans to cluster embeddings
-- Align clusters to identity anchors (e.g., “state governance”)
+- Align clusters to identity anchors 
 
 ###  Sentiment and Stance Mock-Up
 - VADER sentiment scores by identity dimension
@@ -54,8 +54,8 @@ This bar chart provides an example of how identity frames are automatically extr
  initial_fig/
     └── lda/
         └── Document Count per National Identity Dimension.png
- notebooks/
-    └── mock.ipynb
+
+ mock.ipynb
  README.md
  requirements.txt
 ```
@@ -64,13 +64,7 @@ This bar chart provides an example of how identity frames are automatically extr
 
 ##  Setup Instructions
 
-```bash
-pip install -r requirements.txt
-```
 
-Key dependencies:
-- `transformers`, `sentence-transformers`, `sklearn`, `umap-learn`
-- `matplotlib`, `seaborn`, `pandas`, `vaderSentiment`, `nltk`
 
 ---
 
