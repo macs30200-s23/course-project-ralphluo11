@@ -3,7 +3,7 @@
 
 ##  Project Description
 
-This project analyzes how major U.S. news outlets construct and contrast American nationalism with Chinese and Russian nationalism. Using a hybrid NLP framework combining LDA, SBERT+UMAP+KMeans, and BERT-based classification, the analysis maps identity frames (e.g., “geopolitical influence,” “state governance”) and tracks shifts in sentiment and stance across 50,000+ articles from 2022–2024.
+This project analyzes how major U.S. news outlets construct and contrast American nationalism with Chinese and Russian nationalism. Using a hybrid NLP framework combining LDA, SBERT+UMAP+KMeans, and BERT-based classification, the analysis maps identity frames (e.g., “geopolitical influence,” “state governance”) and tracks shifts in sentiment and stance across 50,000+ articles from 2021–2024.
 
 Key themes include:
 - **Media framing divergence by outlet and political orientation**
