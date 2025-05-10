@@ -1,4 +1,3 @@
-
 #  Framing the Nation: Media Construction of National Identity
 
 ##  Project Description
@@ -48,17 +47,22 @@ This bar chart provides an example of how identity frames are automatically extr
 
 ##  Folder Layout
 
-```
- data/
-    └── China_article_nyt2024.csv
- initial_fig/
-    └── lda/
-        └── Document Count per National Identity Dimension.png
-
- mock.ipynb
- README.md
- requirements.txt
-```
+COURSE-PROJECT/
+│
+├── Data/
+│   └── China_article_nyt2024.csv               # Cleaned full-text articles from NYT
+│
+├── initial_fig/                                # Mock-up figures used in proposal
+│   ├── lda/                                    # Topic modeling and clustering visuals
+│   ├── sentiment/                              # Sentiment trends and distributions
+│   └── stance/                                 # Stance classification plots
+│
+├── mock.ipynb                                  # Main analysis notebook
+├── main.tex                                    # LaTeX source file for bibliography
+├── Annotated_Bibliography.bib                  # Annotated bibliography (BibTeX format)
+├── IEEEannot.bst                               # Custom BibTeX style for annotations in bibliography
+├── Big Picture Literature Review.tex           # Literature review
+└── README.md                                   # Project overview and documentation
 
 ---
 
