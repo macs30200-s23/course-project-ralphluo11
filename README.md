@@ -12,28 +12,34 @@ Ultimately, this research seeks to uncover patterns in how national identity is 
 
 ---
 
-##  Workflow Summary (from `mock.ipynb`)
+## Workflow Summary (from `initial mock.ipynb`)
 
-###  Data Preprocessing
-- Load and clean NYT 2024 dataset: `data/China_article_nyt2024.csv`
-- Relabel unknown news desks → “Multimedia”
-- Remove articles with missing `full_text`
-- Standardize date format for time-based analysis
+### 1. Data Preprocessing
+- Load and clean NYT dataset from `China_article_nyt2024.csv`
+- Relabel missing or unknown `news_desk` values to “Multimedia”
+- Drop rows with missing `full_text` entries
+- Remove low-volume news desks: Business Day, Multimedia, Technology, World
+- Standardize and parse `pub_date` for downstream temporal analysis
 
-###  Topic Modeling
-- Apply LDA to extract latent frames
-- Map LDA topics to identity dimensions via manual alignment
-- Track frame prevalence over time using `pub_date`
+### 2. Topic Modeling
+- Apply Latent Dirichlet Allocation (LDA) to extract latent topics
+- Manually align LDA topics to predefined national identity dimensions
+- Aggregate and track frame prevalence monthly using `pub_date`
 
-###  Semantic Clustering
-- Use SBERT + UMAP + KMeans to cluster embeddings
-- Align clusters to identity anchors 
+### 3. Semantic Clustering
+- Encode article text using Sentence-BERT
+- Reduce embedding dimensionality using UMAP (`n_neighbors=50`, `min_dist=0.1`)
+- Cluster with K-Means (optimal k via silhouette score)
+- Match cluster centroids to identity anchor phrases using cosine similarity
 
-###  Sentiment and Stance Mock-Up
-- VADER sentiment scores by identity dimension
-- GPT-assisted stance annotations for frame-attitude correlation
+### 4. Sentiment & Stance Inference (Mock Phase)
+- Compute sentiment using BERT-based transformer (not VADER)
+- Use GPT-assisted zero-shot labeling to assign cluster-level stances: support, oppose, or neutral
+- Analyze temporal trends in sentiment and stance across identity frames
 
 ---
+
+*Note: This notebook reflects a prototype pipeline focused on the NYT 2024 subset. Full implementation will scale this approach to the entire 2021–2024 corpus across all selected outlets.*
 
 ##  Illustrative Mock-Up (Proposal Phase)
 
